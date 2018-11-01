@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/you071012/config-test
+          search-paths: config
+          username: you071012@qq.com
+          password: www.071012
+#      label: master
+#      profile: ukar-pro

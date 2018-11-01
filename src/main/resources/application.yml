@@ -1,0 +1,3 @@
+server:
+  context-path: /config-server
+  port: 8763
