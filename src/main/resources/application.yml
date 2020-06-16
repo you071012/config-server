@@ -1,3 +1,3 @@
 server:
-  context-path: /config-server
+#  context-path: /config-server 加了之后客户端无法访问，待解决
   port: 8763

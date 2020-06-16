@@ -2,6 +2,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: false
+#    instance-id:  ${spring.application.name}(${spring.cloud.client.ip-address}:${server.port})
+    lease-renewal-interval-in-seconds: 10
+
 spring:
   application:
     name: config-server
@@ -13,5 +18,13 @@ spring:
           search-paths: config
           username: you071012@qq.com
           password: www.071012
-#      label: master
-#      profile: ukar-pro
+          default-label: master
+
+# 应用名：ukar
+# 环境名：dev/pro/default
+
+#  / { 应用名 } / { 环境名 } [ / { 分支名 } ]
+#  / { 应用名 } - { 环境名 }.yml
+#  / { 应用名 } - { 环境名 }.properties
+#  / { 分支名 } / { 应用名 } - { 环境名 }.yml
+#  / { 分支名 } / { 应用名 } - { 环境名 }.properties

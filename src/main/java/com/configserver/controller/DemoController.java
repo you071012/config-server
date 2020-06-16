@@ -18,6 +18,6 @@ public class DemoController {
 
     @RequestMapping("/index")
     public String index(){
-        return test;
+        return "oK";
     }
 }
